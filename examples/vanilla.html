@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>everything-ai Demo</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .demo-box { margin: 20px 0; padding: 20px; border: 1px solid #ddd; }
+    .spinner {
+      width: 20px; height: 20px;
+      border: 2px solid #333;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <h1>everything-ai Demo</h1>
+
+  <div class="demo-box">
+    <h3>原始效果</h3>
+    <span class="spinner"></span>
+    <span>加载中...</span>
+  </div>
+
+  <script src="../dist/everything-ai.js"></script>
+  <script>
+    EverythingAI.init({
+      plugins: ['cursor', 'icon', 'prompts'],
+      theme: 'cn-ai'
+    })
+  </script>
+</body>
+</html>
